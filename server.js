@@ -7,19 +7,21 @@ app.use(express.static(__dirname + "/public"));
 
 
 // rutas
-const users = [
-    { firstName: "Reimu", lastName: "Hakurei" },
-    { firstName: "Marisa", lastName: "Kirisame" },
-    { firstName: "Sanae", lastName: "Kochiya" },
-    { firstName: "Sakuya", lastName: "Izayoi" },
-    { firstName: "Momiji", lastName: "Inubashiri" }
-];
+// Esto establece la ubicación donde express buscará la vista ejs
+app.set('views', __dirname + '/views');
+// Ahora configuremos el motor de visualización para que express sepa que estamos usando ejs en lugar de otro motor de jade
+app.set('view engine', 'ejs');
 
-//console.log(users);
+app.get("/cars", (req, res) => {
+    res.render('cars');
+});
 
-// creamos una nueva ruta llama /api/users tipo GET que solo retorna un JSON en el response (res)
-app.get("/api/users", (req, res) => {
-    res.json(users);
+app.get("/cats", (req, res) => {
+    res.render('cats');
+});
+
+app.get("/cars/new", (req, res) => {
+    res.render('new');
 });
 
 
