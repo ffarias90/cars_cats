@@ -1,0 +1,15 @@
+{
+  "name": "reforzamiento",
+  "version": "1.0.0",
+  "description": "esto es una prueba completa",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Felipe Farias",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

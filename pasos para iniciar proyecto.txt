@@ -1,0 +1,36 @@
+pasos para crear un proyecto con Node y Express
+1.- crear carpeta nueva
+2.- creaer el archivo asociado al servidor donde comienza todo
+	server.sj
+3.- copiar lo necesario para configurar nuestro servidor express
+	
+const express = require("express");
+const app = express();
+const port = 8000;
+
+// ejecuta el servidor
+app.listen(port, () => console.log(`Listening on port: ${port}`));
+
+4.- configurar qque el proyecto(carpeta) usará paquedes de NODE es decir NPM
+	npm init || npm init -y (omite las preguntas).
+
+5.- instalar el paquete express: ejecutar en el terminall
+	npm install express
+
+6..- para configurar carpeta estática, crear carpeta  public e importar codigo
+	app.use(express.static(__dirname + "/public"));
+
+7.- ejecutar servidor en terminal
+	node server.js / para salir ctrl + c
+
+	nodemon server.js (opcional)
+	instalar npm install -g nodemon 
+
+----------------------------------------------------
+enrutamiento
+
+1.- configurar rutas 
+	GET:
+	app.get("/api/nombre de variable", (req, res) => {
+    res.json(nombre de variable);
+});
