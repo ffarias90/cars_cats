@@ -36,7 +36,7 @@
 <body>
     <nav>
         <div class="nav-wrapper teal lighten-2">
-            <a href="#" class="brand-logo center">Don Gato y su Pandilla</a>
+            <a href="#" class="brand-logo center">Información de la Pandilla</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
                     <a href="sass.html"></a>
@@ -52,20 +52,36 @@
     </nav>
 
     <div class="container">
-        <div class="row">
-            <div class="col s1">
-                <% for (let indice in cats) { %>
-                    <a href="<%= cats[indice].codigo %>"><img src="imagenes/<%=cats[indice].foto %>" class="circle" alt="<%= cats[indice].name %>"></a>
-                    <% } %>
-            </div>
-        </div>
 
-
-
-
-
-
+        <ul class="collection with-header">
+            <li class="collection-item"><a href="<%= cat.codigo %>"><img src="imagenes/<%=cat.foto %>" class="circle" alt="<%= cat.name %>"></a></li>
+            <li class="collection-header">
+                Información de
+                <h5>
+                    <%=cat.name%>
+                </h5>
+            </li>
+            <li class="collection-item">Comida favorita:
+                <%=cat.favoriteFood%>
+            </li>
+            <li class="collection-item">
+                Edad:
+                <%=cat.age%> años</li>
+            <li class="collection-item">Lugar para dormir:
+                <%=cat.sleepingSpots%>
+            </li>
+        </ul>
     </div>
+
+
+
+
+
+
+
+
+
+
 
 
 
