@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <!--estilos-->
+    <!--Materialize-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--js-->
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <!-- Materialize Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--estilos propios-->
+    <style>
+        .btn {
+            width: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper  light-blue lighten-2">
+            <a href="#" class="brand-logo center">Contador</a>
+        </div>
+    </nav>
+    <div class="container center">
+        <h3>
+            <%=count%>
+        </h3>
+        <a href="/suma" class="waves-effect waves-light btn">+2</a>
+        <a href="/reinicio" class="waves-effect waves-light btn">RESET</a>
+
+    </div>
+
+</body>
+
+</html>

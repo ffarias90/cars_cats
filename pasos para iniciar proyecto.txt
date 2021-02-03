@@ -34,3 +34,10 @@ enrutamiento
 	app.get("/api/nombre de variable", (req, res) => {
     res.json(nombre de variable);
 });
+
+
+
+--------------------------------------------------
+para iniciar un formmulario
+app.use( express.json() );
+app.use( express.urlencoded({ extended: true }) );
